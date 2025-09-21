@@ -1,0 +1,231 @@
+/* style.css */
+body {
+  font-family: 'Arial', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  padding: 20px;
+}
+
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+  box-shadow: 60px 60px #fff, 120px 40px #fff, 180px 60px #fff;
+  width: 200px;
+  height: 60px;
+  top: 20%;
+  left: -200px;
+  animation: floatCloud 60s linear infinite;
+  z-index: -1;
+}
+
+.cloud2 {
+  top: 50%;
+  animation-duration: 80s;
+  opacity: 0.4;
+}
+
+.cloud3 {
+  top: 80%;
+  animation-duration: 100s;
+  opacity: 0.3;
+}
+
+/* 絵文字アイコン（うさぎ・ハート・星） */
+.emoji {
+  position: absolute;
+  font-size: 2.5rem;
+  animation: floatEmoji 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+.heart {
+  top: 30%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.bunny {
+  top: 50%;
+  left: 35%;
+  animation-delay: 1s;
+}
+
+.star {
+  top: 40%;
+  left: 55%;
+  animation-delay: 2s;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.top-section {
+  background-image: radial-gradient(#fff 30%, #fae8e8 40%);
+  background-size: 18px 18px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.info {
+  flex: 1;
+  margin-left: 15px;
+  min-width: 250px;
+}
+
+.slideshow-container {
+  flex: 1;
+  text-align: right;
+  min-width: 250px;
+}
+
+.slide img {
+  max-height: 250px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.female {
+  color: #e75480;
+  font-weight: bold;
+}
+
+.section {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.blue {
+  background-color: #e0f7ff;
+}
+
+.like-dislike {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.likes {
+  background-color: #f9bad2;
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+}
+
+.analysis {
+  background: repeating-linear-gradient(-45deg, #f5e9ce, #f4cf7e 5px, #fce6ba 5px, #fce6ba 10px);
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+}
+
+.likes h2,
+.analysis h2 {
+  background-color: #ffeef0;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.like1 {
+  background-color: #e0f7ff;
+  padding: 1px;
+}
+
+.message {
+  margin-top: 20px;
+  background-color: #fff2f9;
+  border: 2px dashed #e67da5;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.contact h2 {
+  padding-top: 20px;
+  color: #d46a6a;
+  text-align: center;
+}
+
+form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+form input,
+form textarea {
+  width: 95%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #28a745;
+  display: block;
+  margin: 0 auto;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+  /* 雲のアニメーション */
+  @keyframes floatCloud {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(130vw);
+    }
+  }
+
+  /* 絵文字ふわふわアニメーション */
+  @keyframes floatEmoji {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateY(-20px);
+      opacity: 0.8;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
