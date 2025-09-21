@@ -54,9 +54,38 @@ body {
 
 .star {
   top: 40%;
-  left: 55%;
+  left: 60%;
   animation-delay: 2s;
 }
+
+  /* 雲のアニメーション */
+  @keyframes floatCloud {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(130vw);
+    }
+  }
+
+  /* 絵文字ふわふわアニメーション */
+  @keyframes floatEmoji {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateY(-20px);
+      opacity: 0.8;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
 .profile-card {
   background: #fff;
@@ -95,9 +124,10 @@ h1 {
 }
 
 .slide img {
-  max-height: 250px;
+  max-height: 220px;
   border-radius: 10px;
-  margin-right: 20px;
+  margin-right: 50px;
+  margin-top: 5px;
 }
 
 .female {
@@ -116,7 +146,7 @@ h1 {
 }
 
 .like-dislike {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   margin-top: 20px;
 }
@@ -126,6 +156,7 @@ h1 {
   flex: 1;
   min-width: 300px;
   padding: 10px;
+  margin-bottom: 30px;
 }
 
 .analysis {
@@ -176,7 +207,7 @@ form {
 
 form input,
 form textarea {
-  width: 95%;
+  width: 97%;
   padding: 12px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -193,39 +224,11 @@ form button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
 
   footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
     color: #888;
-  }
-
-  /* 雲のアニメーション */
-  @keyframes floatCloud {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(130vw);
-    }
-  }
-
-  /* 絵文字ふわふわアニメーション */
-  @keyframes floatEmoji {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    50% {
-      transform: translateY(-20px);
-      opacity: 0.8;
-    }
-
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
   }
