@@ -58,34 +58,34 @@ body {
   animation-delay: 2s;
 }
 
-  /* 雲のアニメーション */
-  @keyframes floatCloud {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(130vw);
-    }
+/* 雲のアニメーション */
+@keyframes floatCloud {
+  0% {
+    transform: translateX(0);
   }
 
-  /* 絵文字ふわふわアニメーション */
-  @keyframes floatEmoji {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    50% {
-      transform: translateY(-20px);
-      opacity: 0.8;
-    }
-
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  100% {
+    transform: translateX(130vw);
   }
+}
+
+/* 絵文字ふわふわアニメーション */
+@keyframes floatEmoji {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 .profile-card {
   background: #fff;
@@ -145,22 +145,19 @@ h1 {
   background-color: #e0f7ff;
 }
 
-.like-dislike {
-  
-  margin-top: 20px;
-}
 
 .likes {
   background-color: #f9bad2;
-    padding: 15px;
-      border-radius: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
 .analysis {
   background: repeating-linear-gradient(-45deg, #f5e9ce, #f4cf7e 5px, #fce6ba 5px, #fce6ba 10px);
-    border-radius: 10px;
-    padding: 15px;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .likes h2,
@@ -223,9 +220,9 @@ form button {
   cursor: pointer;
 }
 
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    color: #888;
-  }
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
