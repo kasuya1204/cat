@@ -195,13 +195,13 @@ ul {
 }
 
 form {
-  max-width: 90%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
 form input,
 form textarea {
-  width: 90%;
+  width: 80%;
   display: block;
   margin: 0 auto;
   padding: 12px;
