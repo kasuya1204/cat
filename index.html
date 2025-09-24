@@ -19,14 +19,14 @@
   <div class="emoji heart">❤️</div>
   <div class="emoji bunny">🐰</div>
   <div class="emoji star">⭐</div>
-  <div class="profile-card">
-    <h1>わが家のお姫様のプロフィール🐾</h1>
+  <div id="top" class="profile-card">
+    <h1>うちの子プロフィール🐾</h1>
 
     <div class="top-section">
       <div class="info">
         <p><strong>お名前：</strong>ルナ</p>
         <p><strong>生年月日：</strong>2020年 9月19日
-          <p><strong>年齢：</strong><strong id="age"></strong></p>
+        <p><strong>年齢：</strong><strong id="age"></strong></p>
         <p><strong>記念日：</strong>2021年 2月 6日</p>
         <p><strong>犬種：</strong>ペルシャ</p>
         <p><strong>性別：</strong><span class="female">女の子</span></p>
@@ -52,40 +52,64 @@
     </div>
 
 
-      <div class="likes">
-        <h2>あたちはこれが好き～！！</h2>
-        <ul>
-          <li><strong>好きなひと　：</strong><span class="like1">おにぃ</span></li>
-          <li><strong>好きなおやつ：</strong><span class="like1">ちゅ～る</span></li>
-          <li><strong>好きなもの　：</strong><span class="like1">じゃれぶん</span></li>
-          <li><strong>好きなばしょ：</strong><span class="like1">ベッド</span></li>
-          <li><strong>好きなことば：</strong><span class="like1">おやつだよ〜</span></li>
-        </ul>
-      </div>
-      <div class="analysis">
-        <h2>あたちってこんな子！！</h2>
-        <ul>
-          <li>かわいさ：💗💗💗💗💗</li>
-          <li>いたずら：⭐️⭐️⭐️</li>
-          <li>体力　　：⚪️⚪️⚪️⚪️</li>
-          <li>食欲　　：🍖🍖🍖</li>
-          <li>賢さ　　：🐾🐾🐾</li>
-        </ul>
-      </div>
-    
+    <div class="likes">
+      <h2>あたちはこれが好き～！！</h2>
+      <ul>
+        <li><strong>好きなひと　：</strong><span class="like1">おにぃ</span></li>
+        <li><strong>好きなおやつ：</strong><span class="like1">ちゅ～る</span></li>
+        <li><strong>好きなもの　：</strong><span class="like1">じゃれぶん</span></li>
+        <li><strong>好きなばしょ：</strong><span class="like1">ベッド</span></li>
+        <li><strong>好きなことば：</strong><span class="like1">おやつだよ〜</span></li>
+      </ul>
+    </div>
+    <div class="analysis">
+      <h2>あたちってこんな子！！</h2>
+      <ul>
+        <li>かわいさ：💗💗💗💗💗</li>
+        <li>いたずら：⭐️⭐️⭐️</li>
+        <li>体力　　：⚪️⚪️⚪️⚪️</li>
+        <li>食欲　　：🍖🍖🍖</li>
+        <li>賢さ　　：🐾🐾🐾</li>
+      </ul>
+    </div>
+
 
     <div class="message">
       <p>兄弟がいなくて寂しいニャー 💓<br>仲良くして欲しいニャー 🐱</p>
     </div>
-    <section class="contact">
+    <div class="contact">
       <h2>📩お問い合わせ</h2>
       <form>
         <input type="text" placeholder="お名前" required>
         <input type="email" placeholder="メールアドレス" required>
-        <textarea placeholder="お問い合わせ内容" rows="5" required></textarea>
+        <textarea name="comment" placeholder="お問い合わせ内容" rows="5" required></textarea>
         <button type="submit">送信</button>
       </form>
-    </section>
+
+      <script>
+        document.getElementById('surveyForm').addEventListener('submit', function (e) {
+          e.preventDefault();
+          const form = e.target;
+          const data = new FormData(form);
+
+          fetch(`https://script.google.com/macros/s/AKfycbyoWrb5eUjqpeMIQtfJoh_y-mXpR4mWBpHD-pvnjOxddclXd8mjg9jZ07BlSG0bj5s2qw/exec`, {
+            method: 'POST',
+            body: new URLSearchParams(data)
+          })
+            .then(res => res.json())
+            .then(res => {
+              alert("送信されました！");
+              form.reset();
+            })
+            .catch(err => {
+              alert("エラーが発生しました");
+              console.error(err);
+            });
+        });
+      </script>
+
+      <h3><a href="#top">TOPへ</a></h3>
+    </div>
   </div>
   <footer>
     <p>© 2025 ルナのページ</p>
