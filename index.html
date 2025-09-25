@@ -85,7 +85,8 @@
         <textarea name="comment" placeholder="お問い合わせ内容" rows="5" required></textarea>
         <button type="submit">送信</button>
       </form>
-
+      <button id="scrollToTopBtn">Topへ戻る</button>
+      <script src="topslide.js"></script>
       <script>
         document.getElementById('surveyForm').addEventListener('submit', function (e) {
           e.preventDefault();
@@ -107,8 +108,6 @@
             });
         });
       </script>
-
-      <h3><a href="#top">TOPへ</a></h3>
     </div>
   </div>
   <footer>
